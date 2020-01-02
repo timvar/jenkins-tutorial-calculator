@@ -8,6 +8,9 @@ group = 'com.pepe'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
+apply plugin: 'jacoco'
+apply plugin: 'checkstyle'
+
 repositories {
 	mavenCentral()
 }
@@ -21,4 +24,14 @@ dependencies {
 
 test {
 	useJUnitPlatform()
+}
+
+jacocoTestCoverageVerification {
+  violationRules {
+    rule {
+      limit {
+        minimum = 0.2
+      }
+    }
+  }
 }
