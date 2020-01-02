@@ -12,9 +12,13 @@ repositories {
 	mavenCentral()
 }
 
-apply plugin: 'java'
-
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-  testCompile 'junit:junit:4.12'
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+}
+
+test {
+	useJUnitPlatform()
 }
