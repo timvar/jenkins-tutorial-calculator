@@ -1,0 +1,23 @@
+version: 0.2
+
+run-as: root
+
+env:
+  variables:
+    environment: "dev"
+  parameter-store:
+    key: "value"
+    key: "value"
+            
+phases:
+  install:
+    run-as: root
+    runtime-versions:
+      java: corretto8
+    commands:
+      - echo 'install'
+  build:
+    run-as: root
+    commands:
+      - ./gradlew compileJava 
+  
