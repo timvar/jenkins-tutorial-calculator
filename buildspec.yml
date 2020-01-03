@@ -17,4 +17,5 @@ phases:
     run-as: root
     commands:
       - ./gradlew compileJava 
+      - ./gradlew test
   
