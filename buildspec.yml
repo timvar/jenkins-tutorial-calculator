@@ -5,9 +5,6 @@ run-as: root
 env:
   variables:
     environment: "dev"
-  parameter-store:
-    key: "value"
-    key: "value"
             
 phases:
   install:
